@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Example</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="alert alert-primary" role="alert">
+        Modal Example
+    </div>
+    <!-- <h1>chapter 1</h1> -->
+    <div>
+        <img onClick="showImage(this)" data-toggle="modal" data-target="#exampleModalLong" class="img" src="https://assets.newatlas.com/dims4/default/8f236f3/2147483647/strip/true/crop/2940x1960+546+0/resize/1200x800!/quality/90/?url=http%3A%2F%2Fnewatlas-brightspot.s3.amazonaws.com%2Fc3%2Fb7%2Ffcf101f241d3a2e58784fe548b16%2Fant-balancing-the-earth-by-anadgphotography-philippines-analiza-de-guzman-agora-images.jpg" alt="">
+        <img onClick="showImage(this)" data-toggle="modal" data-target="#exampleModalLong" class="img" src="https://images.ctfassets.net/u0haasspfa6q/5anrKPrBjFkQOGIowyYEFu/0af93dd82909934bf5938002ebf80858/best_landscape_photography_apps" alt="">
+        <img onClick="showImage(this)" data-toggle="modal" data-target="#exampleModalLong" class="img" src="https://i.pinimg.com/736x/5a/41/58/5a4158f25a620b90b45eab1e77910a35.jpg" alt="">
+        <img onClick="showImage(this)" data-toggle="modal" data-target="#exampleModalLong" class="img" src="https://www.nationalgeographic.com/content/dam/photography/rights-exempt/your-shot-best-photos-2018/23-2393-bys23-bys12954514_uploadsmember762398yourshot-762398-12954514jpg_evl4xi52irdrkbk33xrmsvzsqpp3eflutfvvbpyjwjhzlmh4iziq_7942x5295.adapt.1900.1.jpg" alt="">
+    </div>
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+    Launch demo modal
+  </button> -->
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <img class="bigImage" src="" alt="" id="modalImage">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <br>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read More Example</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <!-- <h1>chapter 1</h1> -->
+    <div class="alert alert-primary" role="alert">
+        Student Detail...
+    </div>
+    <!-- <div>
+        <p id="counterResult"> </p>
+    </div> -->
+
+<!-- <input type="text" id="inputName">
+<button onclick="addRecord()">Add</button> -->
+
+
+    <!-- <form> -->
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputNamelbl">Name</label>
+            <input type="text" class="form-control" id="inputName" placeholder="Name">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputFatherName">Father's Name</label>
+            <input type="text" class="form-control" id="inputFatherName" placeholder="Father's Name">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputAddress">Address</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+        </div>
+ 
+        <div class="form-row">
+
+          <div class="form-group col-md-4">
+            <label for="inputState">Class</label>
+            <select id="inputState" class="form-control">
+              <option selected>Choose...</option>
+              <option>1. Play Group</option>
+              <option>2. Nursery</option>
+              <option>3. Prep</option>
+            </select>
+          </div>
+
+        </div>
+        <button type="submit" class="btn btn-primary" onclick="addRecord()">Add Record</button>
+        <button type="submit" class="btn btn-primary" onclick="deleteAll()">Delete All</button>
+      <!-- </form> -->
+
+
+
+
+<div>
+    <table class="table" style="width:100%" id="myTable">
+        <!-- <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Fahter's Name</th>
+              <th scope="col">Address</th>
+              <th scope="col">Class</th>
+            </tr>
+          </thead> -->
+
+        <!-- <tr>
+          <th>Name</th>
+          <th>Father's Name</th>
+          <th>Address</th>
+          <th>Class </th>
+        </tr> -->
+    </table>
+
+    <ol id="list">
+
+    </ol>
+</div>
+    <br>
+</body>
+
+</html>
