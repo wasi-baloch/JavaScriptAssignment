@@ -1785,6 +1785,18 @@ function decreaseCounter(){
     document.getElementById("counterResult").value = p-1;
 }
 ////---------Chapter No.49 to 52
+/////-------- Task No.1
+function signupSubmit(){
+    var email =document.getElementById("exampleInputEmail1")
+    var password =document.getElementById("exampleInputPassword1")
+    var paraEmail = document.getElementById("paraEmail")
+    var paraPassword=document.getElementById("paraPassword")
+    paraEmail.innerHTML=email.value
+    paraPassword.innerHTML=password.value;
+
+    // console.log(email.value)
+    // console.log(password.value)
+}
 ////--------- Task No.2
 function expandLoris() {
      var expandedParagraph = "Lunar K2 Bluetooth Wireless Headphone - Rechargeable - Stereo - Mobile Headset - BLACK <br> Specifications of Lunar K2 Bluetooth Wireless Headphone - Rechargeable - Stereo - Mobile Headset - SILVER      BrandlunarSKU141898190_PK-1302040270ConnectorUSBCable Lengthunder 0.5mModelLunar K2 Bluetooth Wireless Headphone - Rechargeable - Stereo - Mobile Headset - SILVERWarranty Policy EN1 Month Brand Warranty. No warranty if broken or damage";
@@ -1835,6 +1847,12 @@ function addRecord(){
     
     var editBtn =document.createElement("button")
     var editText= document.createTextNode("Edit")
+    editBtn.setAttribute("onClick", "editRecord(this)")
+    editBtn.setAttribute("data-toggle", "modal")
+    editBtn.setAttribute("data-target", "#exampleModalLong")
+
+
+
     editBtn.appendChild(editText)
     editBtn.setAttribute("class", "btn btn-primary")
 
@@ -1856,12 +1874,97 @@ function addRecord(){
     // li.appendChild(delBtn)
 
     // list.appendChild(li)
-
-
 }
 function deleteAll(){
     var table = document.getElementById("myTable");
     table.innerHTML=""
+}
+function editRecord(e){
+    var table = document.getElementById("myTable");
+    var para=document.getElementById("para")
+
+    // console.log(table.row)
+    //--Geting row detail
+    var rowRecord=e.parentNode.parentNode;
+    var rowIndex=rowRecord.rowIndex;
+    var oCells = table.rows.item(rowIndex).cells;
+    para.value=rowIndex;
+    // console.log(para.value)
+    // console.log(oCells.item(0).innerHTML)
+    
+    var studentNameModal =document.getElementById("inputNameModal")
+    var fatherNameModal =document.getElementById("inputFatherNameModal")
+    var addressModal =document.getElementById("inputAddressModal")
+    var studentClassModal=document.getElementById("inputStateModal")
+
+    studentNameModal.value=oCells.item(0).innerHTML
+    fatherNameModal.value=oCells.item(1).innerHTML
+    addressModal.value=oCells.item(2).innerHTML
+    studentClassModal.value=oCells.item(3).innerHTML
+
+    // var rowCount = table.rows.length;    
+    // for (var i = 1; i < rowCount - 1; i++) {    
+    //      var row = table.rows[i]["Limit"].ToString();
+    //      console.log(row)
+    // }
+
+    // var rowLength = table.rows.length;
+
+    //loops through rows    
+    // for (i = 0; i < rowLength; i++){
+
+    //   //gets cells of current row  
+    //    var oCells = table.rows.item(i).cells;
+
+    //    //gets amount of cells of current row
+    //    var cellLength = oCells.length;
+
+    //    //loops through each cell in current row
+    //    for(var j = 0; j < cellLength; j++){
+
+    //           // get your cell info here
+
+    //           var cellVal = oCells.item(j).innerHTML;
+    //         //   alert(cellVal);
+    //           console.log(cellVal)
+    //        }
+    // }
+
+    // var val=table.row(e)._cellName;
+    
+
+    // console.log(val.cells.length)
+    // console.log(val.rowIndex)
+    // console.log(e.parentNode.parentNode)
+    // var x = document.getElementById("myTable").rows[e.parentNode.parentNode.rowIndex].cells.length;
+}
+function updateStudenRecord(e){
+    var table = document.getElementById("myTable");
+    var btnSaveChanges=document.getElementById("saveChanges")
+    var para=document.getElementById("para")
+// console.log(e.parentNode)
+    var rowIndex=para.value;
+
+    // var rowRecord=e.parentNode.parentNode;
+    // var rowIndex=rowRecord.rowIndex;
+    var oCells = table.rows.item(rowIndex).cells;
+    
+    
+    var studentNameModal =document.getElementById("inputNameModal")
+    var fatherNameModal =document.getElementById("inputFatherNameModal")
+    var addressModal =document.getElementById("inputAddressModal")
+    var studentClassModal=document.getElementById("inputStateModal")
+
+    // console.log(studentNameModal.value)
+
+
+    oCells.item(0).innerHTML=studentNameModal.value
+    oCells.item(1).innerHTML=fatherNameModal.value
+    oCells.item(2).innerHTML=addressModal.value
+    oCells.item(3).innerHTML=studentClassModal.value
+
+    btnSaveChanges.setAttribute("data-dismiss", "modal")
+
 }
 
 function deleteItem(e){
